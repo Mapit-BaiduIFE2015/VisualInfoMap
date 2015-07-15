@@ -12,7 +12,7 @@ Task Repository for Baidu IFE 2015
 * 自由命题任务实践：8月15日 至 9月7日
 * 任务评比：9月7日 至 9月15日
 
-#约定的编码规范
+##约定的编码规范
 
 [参见这里](https://github.com/ecomfe/spec)
 
