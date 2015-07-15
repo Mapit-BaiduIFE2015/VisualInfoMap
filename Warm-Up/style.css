@@ -1,0 +1,65 @@
+body{
+	width:900px;
+	margin:0 auto;
+	padding:0;
+}
+
+#header{
+	width:900px;
+	height:200px;
+	background:#00a0e9;
+}
+
+#main-body{
+	width:900px;
+	height:1155px;
+	padding-top:25px;
+}
+
+#team-intro{
+	float:left;
+	width:300px;
+	height:1155px;
+	margin-right:20px;
+}
+
+#member-intro{
+	float:left;
+	padding-right:0px;
+	height:1155px;
+	width:580px;
+}
+
+#footer{
+	margin-top:20px;
+	width:900px;
+	height:150px;
+	background:#00a0e9;
+}
+
+.intro-title{
+	height:50px;
+	width:250px;
+	background:#00ff00;
+}
+
+#brief-intro{
+	width:300px;
+	height:500px;
+	margin-top:20px;
+	background:#00a0e9;
+}
+
+#timeline{
+	margin-top:20px;
+	width:300px;
+	height:560px;
+	background:#00a0e9;
+}
+
+.member-details{
+	margin-top:20px;
+	height:200px;
+	width:580px;
+	background:#00a0e9;
+}
