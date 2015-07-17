@@ -106,7 +106,14 @@ body{
     position: relative;
     left: 20px;
     top: 25px;
+    transition:transform 1s;
 }
+
+.member-details img:hover{
+    transform:scale(1.5);
+    transition:transform 1s;
+}
+
 
 .member-details div{
     float: left;
