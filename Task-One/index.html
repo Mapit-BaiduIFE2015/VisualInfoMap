@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Task-One</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="dymanicpage.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="main-content">
+            <h1>中国主要城市空气质量地图图表</h1>
+            <div class="chart" id="map">
+                <!--TODO: Map chart-->
+            </div>
+            <div class="selection" id="roll-or-pie">            <!--rop-->
+                <div class="menu">
+                    <div class="select-item"
+                         onclick="changeChart('rop', 'roll')"
+                         onmouseover="changeBar('rop', 'roll')"
+                         onmouseout="changeBar('rop', 'default')">
+                        <h1>环形图</h1>
+                        <div class="color-bar" id="roll-color-bar" style="background: #4fccf1"></div>
+                    </div>
+                    <div class="select-item"
+                         onclick="changeChart('rop', 'pie')"
+                         onmouseover="changeBar('rop', 'pie')"
+                         onmouseout="changeBar('rop', 'default')">
+                        <h1>饼状图</h1>
+                        <div class="color-bar" id="pie-color-bar" style="background: transparent"></div>
+                    </div>
+                </div>
+                <div class="selected-content">
+                    <div class="chart" id="roll-chart" style="display: block;">roll</div>
+                    <div class="chart" id="pie-chart" style="display: none;">pie</div>
+                </div>
+            </div>
+            <div class="selection" id="line-or-bar"
+                 style="position: relative; left:10px">         <!--lob-->
+                <div class="menu">
+                    <div class="select-item"
+                         onclick="changeChart('lob', 'line')"
+                         onmouseover="changeBar('lob', 'line')"
+                         onmouseout="changeBar('lob', 'default')">
+                        <h1>折线图</h1>
+                        <div class="color-bar" id="line-color-bar" style="background: #4fccf1"></div>
+                    </div>
+                    <div class="select-item"
+                         onclick="changeChart('lob', 'bar')"
+                         onmouseover="changeBar('lob', 'bar')"
+                         onmouseout="changeBar('lob', 'default')">
+                        <h1>柱形图</h1>
+                        <div class="color-bar" id="bar-color-bar" style="background: transparent"></div>
+                    </div>
+                </div>
+                <div class="selected-content">
+                    <div class="chart" id="line-chart" style="display: block;">line</div>
+                    <div class="chart" id="bar-chart" style="display: none;">bar</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
