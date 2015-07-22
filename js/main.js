@@ -44,7 +44,7 @@ function draw ( ) {
                  // 格式化数据            
                  data.format(localData);                
                 // 为echarts对象加载数据 
-                setTimeout(drawDelay,1500);
+                setTimeout(drawDelay,1000);
                 function drawDelay(){
                 myChart0.hideLoading();
                 myChart0.setOption(option0('aqi'));
