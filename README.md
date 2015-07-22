@@ -5,7 +5,7 @@ Task Repository for Baidu IFE 2015
 
 ##任务日程：
 
-* 热身任务：7月15日 至 7月17日
+* ~~热身任务：7月15日 至 7月17日~~
 * 任务一实践：7月18日 至 7月26日
 * 任务二实践：7月27日 至 8月9日
 * 中期交叉Review及教学：8月10日 至 8月14日
@@ -16,6 +16,10 @@ Task Repository for Baidu IFE 2015
 
 [参见这里](https://github.com/ecomfe/spec)
 
-##热身任务
+##~~热身任务~~
 
-[参见这里](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/warm_up.md)
+~~[参见这里](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/warm_up.md)~~
+
+##任务一
+
+[参见这里](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/vis_yangfan_01.md)
