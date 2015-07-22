@@ -3,17 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Task-One</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <script src="./js/dynamicpage.js"></script>
-        <script src="./js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="./js/xlsx.core.min.js"></script>
-        <script src="./js/data.js"></script>
-        <script src="./js/echarts.js"></script> 
-        <script src="./js/options.js"></script>
-        <script src="./js/option0.js"></script>
-        <script src="./js/main.js"></script>
+        <link rel="stylesheet" href="./style.css">
+        <script src="dynamicpage.js"></script>
     </head>
-    <body id="body">
+    <body>
         <div id="header"></div>
         <div id="main-content">
             <h1>中国主要城市空气质量地图图表</h1>
@@ -38,8 +31,8 @@
                     </div>
                 </div>
                 <div class="selected-content">
-                    <div class="chart" id="roll-chart" style="display: block;"></div>
-                    <div class="chart" id="pie-chart" style="display: none;"></div>
+                    <div class="chart" id="roll-chart" style="display: block;">roll</div>
+                    <div class="chart" id="pie-chart" style="display: none;">pie</div>
                 </div>
             </div>
             <div class="selection" id="line-or-bar"
@@ -61,8 +54,8 @@
                     </div>
                 </div>
                 <div class="selected-content">
-                    <div class="chart" id="line-chart" style="display: block;"></div>
-                    <div class="chart" id="bar-chart" style="display: none;"></div>
+                    <div class="chart" id="line-chart" style="display: block;">line</div>
+                    <div class="chart" id="bar-chart" style="display: none;">bar</div>
                 </div>
             </div>
         </div>
