@@ -1,0 +1,229 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #ffffff;
+}
+
+a:link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+body{
+    width:900px;
+    margin:0 auto;
+    padding:0;
+    font-family: "微软雅黑";
+}
+
+#header{
+    width:900px;
+    height:200px;
+    background:#00a0e9;
+}
+
+#main-body{
+    width:900px;
+    height:1155px;
+}
+
+#team-intro{
+    float:left;
+    width:300px;
+    height:1155px;
+    margin-right:20px;
+}
+
+#member-intro{
+    float:left;
+    padding-right:0px;
+    height:1155px;
+    width:580px;
+}
+
+#footer{
+    margin-top:40px;
+    width:900px;
+    height:150px;
+    background:#00a0e9;
+}
+
+.intro-title{
+    padding-top: 25px;
+    height:50px;
+    width:250px;
+}
+
+#brief-intro{
+    width:300px;
+    height:500px;
+    margin-top:20px;
+    background:#00a0e9;
+}
+
+#timeline{
+    margin-top:20px;
+    width:300px;
+    height:560px;
+    background:#00a0e9;
+}
+
+.member-details{
+    margin-top:20px;
+    height:200px;
+    width:580px;
+    background:#00a0e9;
+}
+
+#ife-icon{
+    float: left;
+    position: relative;
+    top: 25px;
+    left: 40px;
+}
+
+#header h1{
+    color: #ffffff;
+    position: relative;
+    float: left;
+    font-size: 60px;
+    left: 60px;
+    top: 40px;
+}
+
+#github-icon{
+    position: relative;
+    left: 200px;
+    top:166px;
+}
+
+.intro-title img{
+    float: left;
+}
+
+.intro-title h2{
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.member-details img{
+    float: left;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    transition:transform 1s;
+}
+
+.member-details img:hover{
+    transform:scale(1.5);
+    transition:transform 1s;
+}
+
+
+.member-details div{
+    float: left;
+    position: relative;
+    left: 40px;
+    width: 450px;
+    height: 200px;
+}
+
+.member-details div h3{
+    position: relative;
+    line-height: 1em;
+    font-size: 50px;
+    color: #ffffff;
+    top: 20px;
+}
+
+.member-details div h4{
+    color: #ffffff;
+    line-height: 1em;
+    position: relative;
+    top: 40px;
+}
+
+.member-details div p{
+    color: #ffffff;
+    position: relative;
+    top: 60px;
+}
+
+#brief-intro h3{
+    position: relative;
+    top: 30px;
+    left: 25px;
+    font-size: 35px;
+    color: #ffffff;
+}
+    
+#brief-intro p{
+    color: #ffffff;
+    position: relative;
+    top: 40px;
+    margin-top: 1em;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#timeline h3{
+    position: relative;
+    top: 30px;
+    left: 25px;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+#line{
+    float: left;
+    position: relative;
+    left: 30px;
+    top: 70px;
+}
+
+#task-list{
+    height: 350px;
+    float: left;
+    position: relative;
+    left: 40px;
+    top: 75px;
+}
+
+.task{
+    height: 50px;
+}
+
+.task h4{
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.task p{
+    position: relative;
+    top: -5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#footer p{
+    color: #ffffff;
+    font-size: 20px;
+    position: relative;
+    top: 50px;
+    left: 40px;   
+}
