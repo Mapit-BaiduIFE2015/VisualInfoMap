@@ -216,7 +216,8 @@ function geoProcess(data)
 		j = j + 8;
 		var temp_code = geoData.substr(j,5);
 		station_codes.push(temp_code);
-		j = j + 7;  //此处是关键，换行符占两个字节
+		//j = j + 7;  //此处是关键，换行符占两个字节
+		j = j + 6;  //服务器端要用这个。。
 		count++;
 	}
 	for(var i = 0; i<509;i++){
