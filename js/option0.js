@@ -62,7 +62,7 @@ function option0 (name) {
                 },
                 geoCoord : data.geoCoord
             },{
-            name: 'Top5',
+            name: 'Top10',
             type: 'map',
             mapType: 'china',
             data:[],
