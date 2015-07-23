@@ -20,6 +20,10 @@ Task Repository for Baidu IFE 2015
 
 ~~[参见这里](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/warm_up.md)~~
 
+[效果展示](http://mapit-baiduife2015.github.io/VisualInfoMap/warmup.html)
+
 ##任务一
 
 [参见这里](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/vis_yangfan_01.md)
+
+[效果展示](http://mapit-baiduife2015.github.io/VisualInfoMap/taskone.html)
