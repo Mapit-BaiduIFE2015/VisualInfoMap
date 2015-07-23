@@ -127,8 +127,8 @@ function getAQIDataFromNet(){
     		console.log("数据需要更新,因为"+dataHours + "!=" + curHours);
     		$.ajax({
 		type:"GET",
-		url:'all_cities.json',  //考虑访问限制原因，这里只调用测试数据
-		dataType:"jsonp",
+		url:'./all_cities.json',  //考虑访问限制原因，这里只调用测试数据
+		dataType:"json",
 		crossDomain:true,
 		success:netData,
 		error:function(data,textStatus,errorThrown){
@@ -150,8 +150,8 @@ function getAQIDataFromNet(){
     	console.log("本地无缓存，请求远程数据");
     	$.ajax({
 		type:"GET",
-		url:'all_cities.json',
-		dataType:"jsonp",
+		url:'./all_cities.json',
+		dataType:"json",
 		crossDomain:true,
 		success:netData,
 		error:function(data,textStatus,errorThrown){
