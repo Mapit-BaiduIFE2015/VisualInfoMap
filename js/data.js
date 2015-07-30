@@ -10,6 +10,10 @@ var aqiCatogoryGZ = [];
 var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
 var localPm="localPm";
 var localData;
+var persheet;
+var timeSpan = {'week':7,'month':daysPerMonth,'quarter':daysPerMonth};
+var cityNames = {'beijing':'北京','shanghai':'上海','guangzhou':'广州'};
+var yaxis = {'peak':'AQI峰值','average':'AQI平均值','days':'AQI<100的天数'};
 
 // Step 0. Initial Variables 
 function initialData() {
@@ -52,7 +56,7 @@ function getData() {
 		/* DO SOMETHING WITH workbook HERE */		
 		var sheet_name_list = workbook.SheetNames;	// Get sheets list	
 		var worksheet = workbook.Sheets[sheet_name_list[0]]; // First sheet
-		var persheet = XLSX.utils.sheet_to_json(worksheet); // Convert sheet to json
+		persheet = XLSX.utils.sheet_to_json(worksheet); // Convert sheet to json
 
 		/* Process the json data*/
 		for (var i = 0; i < persheet.length; i++) {
@@ -307,6 +311,9 @@ var eColorMap = {
     'co' : '#32cd32',
     'no2' : '#6495ed',
     'o3' : '#ff69b4',
-    'so2' : '#87cefa'
+    'so2' : '#87cefa',
+    'week': '#87cefa',
+    'month':'#ff7f50',
+    'quarter':'#32cd32'
 };
 
