@@ -14,7 +14,7 @@ var myChart2;
 var myChart3;
 var myChart4;
 var detailChart;
-var result;
+
 require.config({
             paths: {
                 // echarts: 'http://echarts.baidu.com/build/dist'
@@ -47,9 +47,8 @@ function draw ( ) {
                  detailChart = ec.init(document.getElementById('console'));
                  // 格式化数据            
                  data.format(localData); 
-                 result = loadData("shanghai","month","peak");
-                 result = loadData("shanghai","week","peak");
-                 result = loadData("shanghai","quarter","peak");               
+                var testbar = bar0("guangzhou","month","average");
+                var testline = line0("guangzhou","week","days");        
                 // 为echarts对象加载数据 
                 setTimeout(drawDelay,500);
                 function drawDelay(){
@@ -60,16 +59,16 @@ function draw ( ) {
                 myChart2.hideLoading();
                 myChart2.setOption(pie);
                 myChart3.hideLoading();
-                myChart3.setOption(line);
+                myChart3.setOption(testline);
                 myChart4.hideLoading();
-                myChart4.setOption(bar);
+                myChart4.setOption(testbar);
                 }
-
+            
             var ecConfig = require('echarts/config');
-            myChart3.on(ecConfig.EVENT.HOVER, eConsole);
-            myChart3.on(ecConfig.EVENT.MOUSEOUT, eConsole);
-            myChart4.on(ecConfig.EVENT.HOVER, eConsole);
-            myChart4.on(ecConfig.EVENT.MOUSEOUT, eConsole);
+            // myChart3.on(ecConfig.EVENT.HOVER, eConsole);
+            // myChart3.on(ecConfig.EVENT.MOUSEOUT, eConsole);
+            // myChart4.on(ecConfig.EVENT.HOVER, eConsole);
+            // myChart4.on(ecConfig.EVENT.MOUSEOUT, eConsole);
                 
             }
         );
@@ -77,99 +76,10 @@ function draw ( ) {
 
 
 function eConsole(param) {
-    var keyvalue = param.value;
-    var str;
-    console.log(keyvalue);
-    var degs = ['优','良','轻度污染','中度污染','重度污染','严重污染'];
-    var deg = keyvalue;
-    if (deg < 50) {
-        str = '优';
-    }
-    if (deg < 100&&deg>50) {
-        str = '良';
-    }
-    if (deg < 150&&deg>100) {
-        str = '轻度污染';
-    }
-    if (deg < 200&&deg>150) {
-        str = '中度污染';
-    }
-    if (deg < 300&&deg>200) {
-        str = '重度污染';
-    }
-    if (deg < 400&&deg > 300) {
-        str = '严重污染';
-    }
-
-    var gauge = {
-    tooltip : {
-        formatter: "{a} <br/>{b} : {c}%"
-    }, 
-    grid:{
-        x:'-10',
-        y:'-10',
-        x2:'-10',
-        y2:'-10'
-    },   
-    series : [
-        {
-            name:'AQI指标',
-            type:'gauge',
-            splitNumber: 4,       // 分割段数，默认为5
-            axisLine: {            // 坐标轴线
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    color: [[1/8, '#68CB00'],[2/8, '#F6E200'],[3/8, '#FB890F'],
-                    [4/8, '#DF2D00'],[5/8, '#B414BB'],[6/8, '#B414BB'],[7/8, '#6F0474'],
-                    [8/8, '#6F0474']], 
-                    width: 8
-                }
-            },
-            min:0,
-            max:400,
-            axisTick: {            // 坐标轴小标记
-                splitNumber: 5,   // 每份split细分多少段
-                length :12,        // 属性length控制线长
-                lineStyle: {       // 属性lineStyle控制线条样式
-                    color: 'auto'
-                }
-            },
-            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
-                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    color: 'auto'
-                }
-            },
-            splitLine: {           // 分隔线
-                show: true,        // 默认显示，属性show控制显示与否
-                length :30,         // 属性length控制线长
-                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                    color: 'auto'
-                }
-            },
-            pointer : {
-                width : 5
-            },
-            title : {
-                show : true,
-                offsetCenter: [0, '-30%'],       // x, y，单位px
-                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    fontWeight: 'bolder'
-                }
-            },
-            detail : {
-                formatter:'{value}',
-                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    color: 'auto',
-                    fontWeight: 'bolder'
-                }
-            },
-            data:[{value: keyvalue, name: str  }]
-        }
-    ]
-};
-   
+    var keyvalue = param.value;    
     if (param.type == 'hover') {
          document.getElementById('console').style.visibility = "visible";
-         detailChart.setOption(gauge);
+         detailChart.setOption(gauge0(keyvalue));
 
     }
      if (param.type == 'mouseout') {

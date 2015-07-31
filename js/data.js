@@ -13,7 +13,7 @@ var localData;
 var persheet;
 var timeSpan = {'week':7,'month':daysPerMonth,'quarter':daysPerMonth};
 var cityNames = {'beijing':'北京','shanghai':'上海','guangzhou':'广州'};
-var yaxis = {'peak':'AQI峰值','average':'AQI平均值','days':'AQI<100的天数'};
+
 
 // Step 0. Initial Variables 
 function initialData() {

@@ -163,15 +163,40 @@ var line = {
 	}]
 };
 
-var gaugedemo = {
-    tooltip : {
-        formatter: "{a} <br/>{b} : {c}%"
-    },    
+function gauge0(keyvalue,str)  {
+	var deg = keyvalue;
+	var str;
+    if (deg < 50) {
+        str = '优';
+    }
+    if (deg < 100&&deg>50) {
+        str = '良';
+    }
+    if (deg < 150&&deg>100) {
+        str = '轻度污染';
+    }
+    if (deg < 200&&deg>150) {
+        str = '中度污染';
+    }
+    if (deg < 300&&deg>200) {
+        str = '重度污染';
+    }
+    if (deg < 400&&deg > 300) {
+        str = '严重污染';
+    }
+	var gauge = {
+    
+    grid:{
+        x:'-10',
+        y:'-10',
+        x2:'-10',
+        y2:'-10'
+    },   
     series : [
         {
             name:'AQI指标',
             type:'gauge',
-            splitNumber: 8,       // 分割段数，默认为5
+            splitNumber: 4,       // 分割段数，默认为5
             axisLine: {            // 坐标轴线
                 lineStyle: {       // 属性lineStyle控制线条样式
                     color: [[1/8, '#68CB00'],[2/8, '#F6E200'],[3/8, '#FB890F'],
@@ -206,20 +231,159 @@ var gaugedemo = {
             },
             title : {
                 show : true,
-                offsetCenter: [0, '-40%'],       // x, y，单位px
+                offsetCenter: [0, '-30%'],       // x, y，单位px
                 textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                     fontWeight: 'bolder'
                 }
             },
             detail : {
-                formatter:'{value}%',
+                formatter:'{value}',
                 textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                     color: 'auto',
                     fontWeight: 'bolder'
                 }
             },
-            data:[{value: 50, name: '空气质量级别'}]
+            data:[{value: keyvalue, name: str  }]
         }
     ]
-};
+}
+return gauge;
+}
 
+var ylabel = {'peak':'AQI峰值','average':'AQI平均值','days':'AQI<100的天数'};
+var xlabel = {"week":"周","month":"月","quarter":"季度"};
+
+function line0(cityname,timespan,yaxis){
+	var result = loadData(cityname,timespan,yaxis);
+	console.log(result);
+	var tag = xlabel[timespan];
+	console.log(tag); 	
+	var thisline = {
+		tooltip: {
+		show: true,
+		formatter:function  (params,ticket,callback) {
+			return setTooltips(params,yaxis,timespan);	
+		}			
+	},	
+	xAxis: [{
+		type: 'category',
+		data: result.rCategory,
+		name: xlabel[timespan]
+	}],
+	grid:{
+		x:'50',
+		y:'20',
+		x2:'62',
+		y2:'25'
+	},
+	yAxis: [{
+		type: 'value',
+		name: ylabel[yaxis]
+	}],
+	series: [{
+		"name": "AQI",
+		"type": "line",
+		"smooth":true,
+		"data": result.rData
+	}]
+	}; 
+	console.log(thisline);
+	return thisline;
+		
+
+}
+
+function bar0(cityname,timespan,yaxis) {
+	var result = loadData(cityname,timespan,yaxis);
+	console.log(result);
+	var tag = xlabel[timespan];
+	console.log(tag); 	
+	var thisbar = {
+		tooltip: {
+		show: true,
+		formatter:function  (params,ticket,callback) {
+		return setTooltips(params,yaxis,timespan);				
+		}
+	},	
+	xAxis: [{
+		type: 'category',
+		data: result.rCategory,
+		name: xlabel[timespan]
+	}],
+	grid:{
+		x:'50',
+		y:'20',
+		x2:'62',
+		y2:'25'
+	},
+	yAxis: [{
+		type: 'value',
+		name: ylabel[yaxis]
+	}],
+	series: [{
+		"name": "AQI",
+		"type": "bar",
+		'itemStyle': {                                
+			normal: {                                    
+				// color: 'tomato',
+				color:function  (params) {					
+				   var colorList = [ '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+                                       '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+                                       '#D7504B', '#C6E579'];
+                   if (colorList[params.dataIndex]) {
+                   	return colorList[params.dataIndex];
+                   }
+                   else
+                   	{return 'tomato' ;}
+				},
+				barBorderColor: 'tomato',
+				barBorderWidth: 1,
+				barBorderRadius: 5			                                
+			}                            
+		},
+		"data": result.rData
+	}]
+	}; 
+	console.log(thisbar);
+	return thisbar;
+}
+
+// set tooltips
+
+function setTooltips(params,yaxis,timespan){
+	if(yaxis == 'average'){
+			if (timespan === 'week') {
+				return "AQI  "+params.value+"<br/>"+params.name+"周平均值";
+			}
+			if (timespan === 'month') {
+				return "AQI  "+params.value+"<br/>"+params.name+"月平均值";
+			}
+			if (timespan === 'quarter') {
+				return "AQI  "+params.value+"<br/>"+params.name+"季度平均值";
+			}
+		}
+			if(yaxis == 'days'){
+				if (timespan === 'week') {
+				return params.name+"  周<br/>AQI<100的天数为: "+params.value;
+			}
+			if (timespan === 'month') {
+				return params.name+"  月<br/>AQI<100的天数为: "+params.value;
+			}
+			if (timespan === 'quarter') {
+				return params.name+"  季度<br/>AQI<100的天数为: "+params.value;
+			}			
+			}
+
+			if(yaxis == 'peak'){
+			if (timespan === 'week') {
+				return "AQI  "+params.value+"<br/>"+params.name+"周最大值";
+			}
+			if (timespan === 'month') {
+				return "AQI  "+params.value+"<br/>"+params.name+"月最大值";
+			}
+			if (timespan === 'quarter') {
+				return "AQI  "+params.value+"<br/>"+params.name+"季度最大值";
+			}
+		}
+
+}
