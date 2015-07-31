@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tasktwo</title>
+	<link rel="stylesheet" href="./css/tasktwo.css">	
+</head>
+<body>
+<div class="header">
+	<div class="layout one" id="layoutone">
+		<div class="center"></div>
+	</div>
+	<div class="layout two" id="layouttwo">
+		<div class="top"></div>
+		<div class="bottom"></div>
+	</div>
+	<div class="layout three" id="layoutthree">
+		<div class="left"></div>
+		<div class="right">
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+	</div>
+	<div class="layout four" id="layoutfour">
+		<div class="left">
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+		<div class="right"></div>
+	</div>
+	<div class="layout five" id="layoutfive">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="layout six" id="layoutsix">
+		<div class="top"></div>
+		<div class="bottom">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</div>
+</div>
+<div class="body">
+	<!-- 第一个图 -->
+	<div class="chart first">
+		<div class="section area-style" >
+			<div class="area">
+				<div class="tag">地区</div>
+				<div class="nmark city beijing">北京</div>
+				<div class="nmark city shanghai">上海</div>
+				<div class="nmark city guangzhou">广州</div>
+			</div>
+			<div class="style">
+				<div class="tag">图标</div>
+				<div class="nmark map bar">柱状图</div>
+				<div class="nmark map line">折线图</div>				
+			</div>
+		</div>
+		<hr>
+		<div class="section time-yaxis" >
+			<div class="time">
+				<div class="tag">粒度</div>
+				<div class="nmark period week">周粒度</div>
+				<div class="nmark period month">月粒度</div>
+				<div class="nmark period quarter">季粒度</div>
+			</div>
+			<div class="yaxis">
+				<div class="tag">纵坐标值</div>
+				<div class="nmark size peak">AQI峰值</div>
+				<div class="nmark size average">AQI平均值</div>
+				<div class="nmark size days">AQI&lt;100的天数</div>				
+			</div>
+		</div>
+		<hr>
+		<div class="graph" id="first-graph"></div>
+	</div>
+
+	<!-- 第二个图 -->
+	<div class="chart second">
+		<div class="section area-style" >
+			<div class="area">
+				<div class="tag">地区</div>
+				<div class="nmark city beijing">北京</div>
+				<div class="nmark city shanghai">上海</div>
+				<div class="nmark city guangzhou">广州</div>
+			</div>
+			<div class="style">
+				<div class="tag">图标</div>
+				<div class="nmark map bar">柱状图</div>
+				<div class="nmark map line">折线图</div>				
+			</div>
+		</div>
+		<hr>
+		<div class="section time-yaxis" >
+			<div class="time">
+				<div class="tag">粒度</div>
+				<div class="nmark period week">周粒度</div>
+				<div class="nmark period month">月粒度</div>
+				<div class="nmark period quarter">季粒度</div>
+			</div>
+			<div class="yaxis">
+				<div class="tag">纵坐标值</div>
+				<div class="nmark size peak">AQI峰值</div>
+				<div class="nmark size average">AQI平均值</div>
+				<div class="nmark size days">AQI&lt;100的天数</div>				
+			</div>
+		</div>
+		<hr>
+		<div class="graph" id="second-graph"></div>
+	</div>
+
+	<!-- 第三个图 -->
+	<div class="chart third">
+		<div class="section area-style" >
+			<div class="area">
+				<div class="tag">地区</div>
+				<div class="nmark city beijing">北京</div>
+				<div class="nmark city shanghai">上海</div>
+				<div class="nmark city guangzhou">广州</div>
+			</div>
+			<div class="style">
+				<div class="tag">图标</div>
+				<div class="nmark map bar">柱状图</div>
+				<div class="nmark map line">折线图</div>				
+			</div>
+		</div>
+		<hr>
+		<div class="section time-yaxis" >
+			<div class="time">
+				<div class="tag">粒度</div>
+				<div class="nmark period week">周粒度</div>
+				<div class="nmark period month">月粒度</div>
+				<div class="nmark period quarter">季粒度</div>
+			</div>
+			<div class="yaxis">
+				<div class="tag">纵坐标值</div>
+				<div class="nmark size peak">AQI峰值</div>
+				<div class="nmark size average">AQI平均值</div>
+				<div class="nmark size days">AQI&lt;100的天数</div>				
+			</div>
+		</div>
+		<hr>
+		<div class="graph" id="third-graph"></div>
+	</div>
+
+</div>	
+</body>
+<script src="./js/jquery-2.1.4.min.js"></script>
+<script src="./js/layout.js"></script>
+</html>
