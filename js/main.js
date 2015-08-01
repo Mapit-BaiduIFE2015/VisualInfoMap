@@ -8,11 +8,19 @@ window.onload = function  () {
 
 var EC_READY = false;
 var DATA_READY = false;
+
+//任务一的图框
 var myChart0;
 var myChart1;
 var myChart2;
 var myChart3;
 var myChart4;
+
+var randomColor = false;
+
+
+
+// 详细信息的gauge图，作为补充，可视化方式有待考虑
 var detailChart;
 
 require.config({
@@ -22,8 +30,7 @@ require.config({
             }
         });
 
-function draw ( ) {
-	
+function draw ( ) {	
         
         // 使用
         require(
