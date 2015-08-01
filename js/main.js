@@ -72,10 +72,10 @@ function draw ( ) {
                 }
             
             var ecConfig = require('echarts/config');
-            // myChart3.on(ecConfig.EVENT.HOVER, eConsole);
-            // myChart3.on(ecConfig.EVENT.MOUSEOUT, eConsole);
-            // myChart4.on(ecConfig.EVENT.HOVER, eConsole);
-            // myChart4.on(ecConfig.EVENT.MOUSEOUT, eConsole);
+            myChart3.on(ecConfig.EVENT.HOVER, eConsole);
+            myChart3.on(ecConfig.EVENT.MOUSEOUT, eConsole);
+            myChart4.on(ecConfig.EVENT.HOVER, eConsole);
+            myChart4.on(ecConfig.EVENT.MOUSEOUT, eConsole);
                 
             }
         );
