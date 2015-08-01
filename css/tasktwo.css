@@ -227,7 +227,7 @@ html,body{
 }
 
 .city,.map,.period,.size{
-	font-weight: bolder;
+	font-weight: 600;
 }
 
 .tag{

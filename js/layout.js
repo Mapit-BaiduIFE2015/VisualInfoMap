@@ -142,7 +142,7 @@ function changeLayout(){
 }
 
 function styleReset () {
-	//default css
+	// default css
 /*
 	.first{
 	height: 400px;
@@ -201,6 +201,5 @@ $(".third").hide().css({
 });
 
 $(".layout").css("background-color","#4A6C8D");
-
 
 }
