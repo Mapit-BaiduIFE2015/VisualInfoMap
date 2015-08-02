@@ -82,6 +82,7 @@ function draw ( ) {
 }
 
 
+
 function eConsole(param) {
     var keyvalue = param.value;    
     if (param.type == 'hover') {

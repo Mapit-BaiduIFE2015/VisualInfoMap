@@ -7,7 +7,7 @@ html,body{
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	
+
 	background-color: #F7F8FD;
 	/*font: 14px/1.5 'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;*/
 	font-family: "Corbel",'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
@@ -18,8 +18,12 @@ html,body{
 	height: 80px;
 	position: relative;
 	background-color: #3C5A78;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content:flex-end;
+	-webkit-justify-content:flex-end;
+	    -ms-flex-pack:end;
+	        justify-content:flex-end;
 	margin-bottom: 10px;
 }
 
@@ -27,7 +31,7 @@ html,body{
 	width: 80px;
 	height: 80px;
 	background-color: #4A6C8D;
-	margin-left: 2px;	
+	margin-left: 2px;
 }
 
 .layout:hover{
@@ -43,7 +47,7 @@ html,body{
 	width: 50px;
 	height: 30px;
 	background-color: #7CC0EE;
-	margin: 25px auto;	
+	margin: 25px auto;
 }
 
 .two .top{
@@ -63,9 +67,15 @@ html,body{
 }
 
 .three {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content:center;
-	align-items:center;	
+	-webkit-justify-content:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-align-items:center;
+	    -ms-flex-align:center;
+	        align-items:center;
 }
 
 .three .left{
@@ -76,9 +86,15 @@ html,body{
 }
 
 .three .right{
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 }
 
 .three .right .top{
@@ -90,15 +106,21 @@ html,body{
 
 .three .right .bottom{
 	width: 25px;
-	height: 15px;	
+	height: 15px;
 	background-color: #0086A7;
 }
 
 .four{
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	-ms-align-items: center;
-	align-items: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .four .left{
@@ -106,13 +128,14 @@ html,body{
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -ms-flexbox;
 	display: flex;
 	-webkit-flex-direction: column;
 	-moz-flex-direction: column;
 	-ms-flex-direction: column;
 	-o-flex-direction: column;
-	flex-direction: column;	
-	margin-right: 1px;	
+	flex-direction: column;
+	margin-right: 1px;
 }
 
 .four .left .top{
@@ -139,9 +162,14 @@ html,body{
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .five .left{
@@ -162,9 +190,14 @@ html,body{
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	-webkit-flex-direction: column;
 	-moz-flex-direction: column;
 	-ms-flex-direction: column;
@@ -184,6 +217,7 @@ html,body{
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -ms-flexbox;
 	display: flex;
 	-webkit-flex-direction: row;
 	-moz-flex-direction: row;
@@ -196,26 +230,31 @@ html,body{
 	width: 25px;
 	height: 15px;
 	margin-right: 1px;
-	background-color: #62D8FF;	
+	background-color: #62D8FF;
 }
 
 .six .bottom .right{
 	width: 25px;
 	height: 15px;
-	background-color: #00B0EE;	
+	background-color: #00B0EE;
 }
 
 .seven {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	-webkit-flex-flow: column;
-	-moz-flex-flow: column;
 	-ms-flex-flow: column;
 	-o-flex-flow: column;
 	flex-flow: column;
-	justify-content: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	-ms-align-items: center;
-	align-items: center;
-	margin-left: 20px;	
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-left: 20px;
 }
 
 .seven .toolbar{
@@ -228,23 +267,27 @@ html,body{
 
 
 .area-style{
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	height: 20px;
 	line-height: 20px;
 	vertical-align: middle;
 	font-size: 15px;
 	/*font-family: "Microsoft YaHei";	*/
-	color: #AFAFB0;	
+	color: #AFAFB0;
 }
 
 .time-yaxis{
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	height: 20px;
 	line-height: 20px;
 	vertical-align: center;
 	font-size: 15px;
 	/*font-family: "Microsoft YaHei";	*/
-	color: #AFAFB0;	
+	color: #AFAFB0;
 }
 
 .city,.map,.period,.size{
@@ -260,7 +303,7 @@ html,body{
 	content: " ";
 	display: inline-block;
 	width: 10px;
-	height: 10px;	
+	height: 10px;
 	border-radius: 50%;
 	margin-right: 5px;
 	background-color: #6CBD89;
@@ -271,7 +314,7 @@ html,body{
 	content: " ";
 	display: inline-block;
 	width: 10px;
-	height: 10px;	
+	height: 10px;
 	border-radius: 50%;
 	margin-right: 5px;
 	background-color: #F19148;
@@ -281,7 +324,7 @@ html,body{
 	content: " ";
 	display: inline-block;
 	width: 10px;
-	height: 10px;	
+	height: 10px;
 	border-radius: 50%;
 	margin-right: 5px;
 	background-color: #F9194C;
@@ -294,11 +337,13 @@ hr{
 }
 
 .area,.style,.time,.yaxis{
-	display: flex;	
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .city,.map,.size{
-	margin-left: 10px;	
+	margin-left: 10px;
 }
 
 .period{
@@ -311,7 +356,7 @@ hr{
 	display: block;
 	height: 3px;
 	background-color: #7CBFF0;
-	visibility: hidden;	
+	visibility: hidden;
 }
 
 .nmark:hover,.mark:hover{
@@ -331,7 +376,7 @@ hr{
 	display: block;
 	height: 3px;
 	background-color: #7CBFF0;
-	visibility: visible;	
+	visibility: visible;
 }
 
 
@@ -375,18 +420,18 @@ hr{
 	margin-left: 3px;
 	margin-right: 3px;
 	margin-bottom: 3px;
-	height: 80%;	
+	height: 80%;
 }
 
 #second-graph{
 	/*margin-left: 30px;
 	margin-right: 30px;*/
-	height: 75%;	
+	height: 75%;
 }
 
 #third-graph{
 	/*margin-left: 30px;
 	margin-right: 30px;*/
-	height: 75%;	
+	height: 75%;
 }
 

@@ -6,9 +6,9 @@
 
 
 function addBlueBar(element){
-	$(element).on("click",function () {			
+	$(element).on("click",function () {
 		$(element).removeClass('mark').addClass('nmark');
-		$(this).each(function(){					
+		$(this).each(function(){
 			$(this).removeClass('nmark').addClass('mark');
 			reDrawChart(element);
 		});
@@ -53,16 +53,16 @@ function changeLayout(){
 		$(".second").hide();
 		$(".third").hide();
 		$(".first").hide().fadeIn(1000).css("height","710px");
-		reDrawLayout();		
+		reDrawLayout();
 	});
 
 	$("#layouttwo").on("click",function(){
-		styleReset();	
-		$(this).css("background-color","#618CB7");	
+		styleReset();
+		$(this).css("background-color","#618CB7");
 		$(".third").hide();
 		$(".second").hide().fadeIn(1000).css("width","90%").css("height","350px");
 		$(".first").hide().fadeIn(1000).css("height","350px");
-		reDrawLayout();		
+		reDrawLayout();
 	});
 
 	$("#layoutthree").on("click",function(){
@@ -150,7 +150,7 @@ function changeLayout(){
 		reDrawLayout();
 	});
 
-	
+
 }
 
 function styleReset () {
@@ -183,13 +183,13 @@ function styleReset () {
 }
  */
 $(".first").hide().css({
-	'height': '400px',		
+	'height': '400px',
 	'width': '90%',
 	'margin-left': 'auto',
 	'margin-right':' auto',
 	"clear":"both",
 	"float":"none"
-	
+
 });
 
 $(".second").hide().css({
@@ -209,7 +209,7 @@ $(".third").hide().css({
 	'float': 'right',
 	'margin-right': '5%',
 	"margin-left":'auto',
-	"float":"none"	
+	"float":"none"
 });
 
 $(".layout").css("background-color","#4A6C8D");
@@ -220,7 +220,7 @@ function reDrawLayout() {
 		// myChart1.clear();
 		// myChart2.clear();
 		// myChart3.clear();
-		window.onresize = myChart1.resize();	
+		window.onresize = myChart1.resize();
 		window.onresize = myChart2.resize();
 		window.onresize = myChart3.resize();
 
@@ -235,13 +235,13 @@ function reDrawLayout() {
 		setTimeout(drawSmooth,1000);
 
 		function drawSmooth(){
-				myChart1.hideLoading();                
+				myChart1.hideLoading();
                 myChart1.setOption(chart1opts);
                 myChart2.hideLoading();
                 myChart2.setOption(chart2opts);
                 myChart3.hideLoading();
-                myChart3.setOption(chart3opts); 
-		}		  
+                myChart3.setOption(chart3opts);
+		}
 }
 
 
@@ -262,8 +262,8 @@ function reDrawChart (element) {
 	var periodSelected = params[2];
 	var sizeSelected = params[3];
 	var optsSelected;
-	console.log(typeSelected);	
-	
+	console.log(typeSelected);
+
 	if(typeSelected === "bar"){
 		optsSelected = bar0(citySelected,periodSelected,sizeSelected);
 	}
